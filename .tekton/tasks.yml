@@ -15,6 +15,7 @@ spec:
           value: "$(workspaces.source.path)"
       workingDir: "$(workspaces.source.path)"
       securityContext:
+        privileged: false
         runAsNonRoot: false
         runAsUser: 0
       script: |
