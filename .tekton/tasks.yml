@@ -11,8 +11,8 @@ spec:
     - name: remove
       image: alpine:3
       env:
-        name: WORKSPACE_SOURCE_PATH
-        value: "$(workspaces.source.path)"
+        - name: WORKSPACE_SOURCE_PATH
+          value: "$(workspaces.source.path)"
       workingDir: "$(workspaces.source.path)"
       securityContext:
         runAsNonRoot: false
